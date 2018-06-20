@@ -2,7 +2,7 @@
 	error_reporting(0);
 	session_start();
 	include_once("analyticstracking.php");
-	require("./connects/connect.php");
+	// require("./connects/connect.php");
 	
 	if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
 		// last request was more than 30 minutes ago
@@ -34,13 +34,13 @@
 	$uname = isset($obj['name']) ? $obj['name'] : "";
 	$uemail = isset($obj['email']) ? $obj['email'] : "";
 	
-	$query = $conn->query("SELECT * FROM `users` WHERE `email` = '".$uemail."'");
-	$d = mysqli_fetch_array($query, MYSQLI_ASSOC);
-	if(!$d)
-	{
-		$query = $conn->query("INSERT INTO `users` (`id`, `name`, `email`, `user_id`) VALUES (NULL, '".$uname."', '".$uemail."', '".$uid."');");
-		$d = mysqli_fetch_array($query, MYSQLI_ASSOC);
-	}	
+	// $query = $conn->query("SELECT * FROM `users` WHERE `email` = '".$uemail."'");
+	// $d = mysqli_fetch_array($query, MYSQLI_ASSOC);
+	// if(!$d)
+	// {
+	// 	$query = $conn->query("INSERT INTO `users` (`id`, `name`, `email`, `user_id`) VALUES (NULL, '".$uname."', '".$uemail."', '".$uid."');");
+	// 	$d = mysqli_fetch_array($query, MYSQLI_ASSOC);
+	// }	
 	
 	
 ?>

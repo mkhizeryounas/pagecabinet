@@ -2,9 +2,9 @@
 	//error_reporting(0);
 	try 
 	{
-		$host = "localhost";
+		$host = "localhost:8889";
 		$user = "root";
-		$password = "";
+		$password = "root";
 		$database = "flame_records_b1";
 		
 		$conn = mysqli_connect($host, $user,$password,$database);

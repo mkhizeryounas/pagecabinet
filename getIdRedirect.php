@@ -8,7 +8,7 @@
 	$fbid3;
 	$f2;
 	
-	$access_token="1539032803004026|Ns9xYJcoF5tq7zR1TQjkCIxlB9I";
+	$access_token="EAAV3vfZBFTnoBACSSJ8W0rZCv1tRHtT5I7BjROUhLS6QenOCRjCOxZAP8WtBepsLOyagfKRoKIBpMA7Eak3UgExJg6RVurLphw9EIrtPL8vOwfMiQ1Lv02LgkQ3arEXkAdkJPvMNE67h0XOJrT6RUab2uKCY8PTiEHRq8ZBZAiAZDZD";
 	if(isset($_GET["fbid"]))
 	{
 		$fbid = $_GET["fbid"];
@@ -47,8 +47,10 @@
 			$page_id = isset($obj['id']) ? $obj['id'] : "";
 			$page_name = isset($obj['name']) ? $obj['name'] : "";
 						
-			if($page_id == "")
+			if($page_id == "") {
 				$f2 = $fbid3;
+				$page_id = $fbid3;
+			}
 			else
 				break;
 		}
